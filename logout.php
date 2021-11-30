@@ -1,0 +1,21 @@
+<?php
+	session_start();
+	if(isset($_SESSION['USUARIO'])){
+		$_SESSION['USUARIO'];
+		$_SESSION['warnings'];
+		$_SESSION['rol'];
+		$_SESSION['nombreCompleto'];
+		$_SESSION['imgPer'];
+		$_SESSION['nombreCompleto'];
+		$_SESSION['sexo'];
+		$_SESSION['correo'];
+		$_SESSION['division'];
+		$_SERVER['errorcar'];
+		$_SESSION['ventana'];
+		session_destroy();
+		header('location:index.php');
+	}
+	else
+		header('location:index.php');
+		//echo 'no existe secion';
+?>

@@ -1,0 +1,10 @@
+#evita la vista de las carpetas que tenemos
+php_value display_errors 1
+
+php_flag output_buffering on
+Options ALL -Indexes 
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
